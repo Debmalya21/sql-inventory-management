@@ -1,59 +1,68 @@
-# SQL Inventory Management System
+# SQL Inventory Management & Sales Analysis Project
 
-## Project Overview
-This project simulates a real-world Inventory Management System using SQL Server.
-It is designed to demonstrate database design, data insertion, and business-driven
-analysis for a fresher Data Analyst role.
+## Overview
+This project demonstrates a complete **Inventory Management System** using **SQL Server**.  
+It focuses on **sales analysis, supplier contribution, and inventory control** through real-world business questions.
 
-The system manages suppliers, products, customers, stock levels, and sales orders,
-and answers key business questions related to revenue, inventory control, and
-supplier performance.
+The project is designed to reflect how SQL is used in real organizations for:
+- Revenue analysis
+- Supplier dependency assessment
+- Stock replenishment decisions
+- Operational risk identification
 
 ---
 
-## Database Schema
-The project includes the following tables:
+## Database Design
+The system consists of the following tables:
 
-- SUPPLIER
-- PRODUCT
-- CUSTOMER
-- STOCK
-- ORDERS
-- ORDER_DETAILS
+- **SUPPLIER** – Supplier master information  
+- **PRODUCT** – Product details linked to suppliers  
+- **CUSTOMER** – Customer demographic data  
+- **ORDERS** – Order-level transaction data  
+- **ORDER_DETAILS** – Line-level sales data  
+- **STOCK** – Inventory levels and reorder thresholds  
+
+All tables are connected using **primary and foreign key constraints** to ensure data integrity.
 
 ---
 
 ## Key Business Questions Answered
 
-1. Total revenue generated from sales
-2. Top-performing products by revenue
-3. Supplier-wise revenue contribution
-4. Pareto analysis (top suppliers contributing ~80% revenue)
-5. Products below reorder level
-6. Frequently sold products with low stock
-7. Reorder quantity required for inventory planning
-8. Supplier-wise stock dependency analysis
+### Revenue & Supplier Analysis
+- Total revenue generated from all orders  
+- Top revenue-generating products  
+- Supplier-wise revenue contribution (%)  
+- Pareto Analysis: Identifying suppliers contributing ~80% of revenue  
+
+### Inventory Control & Operations
+- Products below reorder level  
+- Required reorder quantity per product  
+- Supplier-wise inventory dependency and low-stock exposure  
+
+---
+
+## Key Insights
+- A small number of suppliers contribute a majority of revenue, indicating **revenue concentration risk**.
+- Several high-demand products are below reorder levels, requiring **immediate replenishment**.
+- Certain suppliers supply multiple low-stock products, making them **critical to operations**.
 
 ---
 
 ## Skills Demonstrated
-
-- Relational database design
-- Primary and foreign key relationships
-- Data validation using constraints
-- Business-focused SQL querying
-- Aggregations, joins, views, and analytics
-- Inventory and sales analysis
+- Relational database design  
+- SQL joins and aggregations  
+- Window functions (cumulative revenue analysis)  
+- Common Table Expressions (CTEs)  
+- Business-oriented analytical thinking  
 
 ---
 
-## Tools Used
-
-- SQL Server
-- SQL Server Management Studio (SSMS)
+## How to Run the Project
+1. Open **SQL Server Management Studio (SSMS)**
+2. Execute the file `inventory_management.sql`
+3. Run queries section-wise to view insights
 
 ---
 
 ## Author
 **Debmalya Roy**
-Aspiring Data Analyst
